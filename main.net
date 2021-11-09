@@ -1,0 +1,18 @@
+* C:\Users\mcho\Desktop\ml_digital_circuit_verification\main.asc
+XX1 in out P001 0 inv_20_10 params: INV_20_10
+V1 P001 0 1
+V2 in 0 PULSE(0 1 0 10n 1p 10n 20n)
+
+* block symbol definitions
+.subckt inv_20_10 In Out VDD GND
+M1 Out In GND GND N_50n l=50n w=650n
+M2 VDD In Out VDD P_50n l=50n w=1350n
+.include cmosedu_models.txt
+.ends inv_20_10
+
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\mcho\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 0 10n 0 0.001n
+.backanno
+.end
