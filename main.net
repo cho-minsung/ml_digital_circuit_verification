@@ -5,8 +5,8 @@ V2 in 0 PULSE(0 1 0 10n 1p 10n 20n)
 
 * block symbol definitions
 .subckt inv_20_10 In Out VDD GND
-M1 Out In GND GND N_50n l=50n w=650n
-M2 VDD In Out VDD P_50n l=50n w=1350n
+M1 Out In GND GND N_50n l=500n w=950n
+M2 VDD In Out VDD P_50n l=500n w=1450n
 .include cmosedu_models.txt
 .ends inv_20_10
 
