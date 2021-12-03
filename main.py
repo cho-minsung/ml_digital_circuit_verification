@@ -238,4 +238,8 @@ if __name__ == '__main__':
         validation_split=0.2,
         verbose=0, epochs=100)
 
+    hist = pd.DataFrame(history.history)
+    hist['epoch'] = history.epoch
+    print(hist.tail())
+
     plot_loss(history)
